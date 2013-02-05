@@ -1,4 +1,4 @@
 # encoding: utf-8
 module RedirectCheck
-	UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 5_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9A405 Safari/7534.48.3' unless defined?(::RedirectCheck::UA)
+	UA = 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0' unless defined?(::RedirectCheck::UA)
 end
