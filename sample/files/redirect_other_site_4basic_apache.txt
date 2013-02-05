@@ -1,0 +1,9 @@
+http://pc.animelo.jp/index.php/m/portal/a/title/title_id/777597	http://melody.animelo.jp/search/portal/music/index.html?uid=NULLGWDOCOMO&muid=777597	301
+http://pc.animelo.jp/index.php/m/portal/a/title/title_id/777597/genre_id/30001	http://melody.animelo.jp/search/portal/music/index.html?uid=NULLGWDOCOMO&muid=777597&mgid=30001	301
+http://pc.animelo.jp/index.php/m/portal/a/artist/artist_id/1148	http://melody.animelo.jp/search/portal/artist/index.html?uid=NULLGWDOCOMO&aid=1148	301
+http://pc.animelo.jp/index.php/m/portal/a/artist/artist_id/1148/genre_id/30001	http://melody.animelo.jp/search/portal/artist/index.html?uid=NULLGWDOCOMO&aid=1148&mgid=30001	301
+http://pc.animelo.jp/index.php/m/portal/a/tieup/tieup_id/18156	http://melody.animelo.jp/search/tieup/music_result.html?uid=NULLGWDOCOMO&tid=18156	301
+http://pc.animelo.jp/link.php/d/ctssvc/f/animelouta/	http://uta.animelo.jp/?uid=NULLGWDOCOMO	301
+http://pc.animelo.jp/link.php/d/ctssvc/f/choanimelo/	http://full.animelo.jp/?uid=NULLGWDOCOMO	301
+http://pc.animelo.jp/link.php/d/ctssvc/f/animelocall/	http://call.animelo.jp/?uid=NULLGWDOCOMO	301
+http://pc.animelo.jp/link.php/d/ctssvc/f/animelokashi/	http://kashi.animelo.jp/?uid=NULLGWDOCOMO	301

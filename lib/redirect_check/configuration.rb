@@ -16,24 +16,24 @@ module RedirectCheck
 		attr_accessor *VALID_OPTION_KEYS
 		
 		def self.extended(base)
-	      base.init
-	    end 
+      base.init
+    end 
 	    
-	    def init
+    def init
 			self.ua = DEFAULT_UA
 			self.file = DEFAULT_FILE
 			self.rows = DEFAULT_ROWS
 			self.result = DEFAULT_RESULT
 		end
 		
-	    def options
-	    	VALID_OPTION_KEYS.inject({}) do |option,key|
-	    		option.merge!(key => send(key))
-	    	end
-	    end
+    def options
+      VALID_OPTION_KEYS.inject({}) do |option,key|
+        option.merge!(key => send(key))
+      end
+    end
 	    
-		def configure
-	      yield self
-	    end
+    def configure
+      yield self
+    end
 	end
 end

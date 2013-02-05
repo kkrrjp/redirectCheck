@@ -15,21 +15,53 @@ obj = RedirectCheck.client({
 
 res = obj.header
 
-
-obj = RedirectCheck.client({
-							:ua=> device[:basic], 
-							:file=> File.expand_path('../files/redirect_other_site_4basic.txt',__FILE__)
-							})
-
-
-res = obj.header
-
-p obj.rows
-
 p "Android"
-p "Basic"
 puts "----------------------------------------------------"
 puts "#{res.length} tests, #{res.select{|r| r[:result]==true}.length} passes, #{res.select{|r| r[:result]==false}.length} fails"
 puts "----------------------------------------------------"
+
+obj2 = RedirectCheck.client({
+							:ua=> device[:android], 
+							:file=> File.expand_path( '../files/redirect_other_site_4android_apache.txt',__FILE__ ),
+              :rows=>[],
+              :result=>[]
+							})
+
+res2 = obj2.header
+
+p "Android Apache"
+puts "----------------------------------------------------"
+puts "#{res2.length} tests, #{res2.select{|r| r[:result]==true}.length} passes, #{res2.select{|r| r[:result]==false}.length} fails"
+puts "----------------------------------------------------"
+
+obj3 = RedirectCheck.client({
+							:ua=> device[:basic], 
+							:file=> File.expand_path('../files/redirect_other_site_4basic.txt',__FILE__),
+              :rows=>[],
+              :result=>[]
+							})
+
+
+res3 = obj3.header
+p "Basic"
+puts "----------------------------------------------------"
+puts "#{res3.length} tests, #{res3.select{|r| r[:result]==true}.length} passes, #{res3.select{|r| r[:result]==false}.length} fails"
+puts "----------------------------------------------------"
+
+
+obj4 = RedirectCheck.client({
+							:ua=> device[:basic], 
+							:file=> File.expand_path('../files/redirect_other_site_4basic_apache.txt',__FILE__),
+              :rows=>[],
+              :result=>[]
+							})
+
+
+res4 = obj4.header
+p "Basic Apache"
+puts "----------------------------------------------------"
+puts "#{res4.length} tests, #{res4.select{|r| r[:result]==true}.length} passes, #{res4.select{|r| r[:result]==false}.length} fails"
+puts "----------------------------------------------------"
+
 
 exit
