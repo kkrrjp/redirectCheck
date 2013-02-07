@@ -6,32 +6,30 @@ module RedirectCheck
 		attr_accessor *Configuration::VALID_OPTION_KEYS
 		
 		def initialize(options={})
-	      options = RedirectCheck.options.merge(options)
-	      Configuration::VALID_OPTION_KEYS.each do |key|
-	        send("#{key}=", options[key])
-	      end
+      options = RedirectCheck.options.merge(options)
+      Configuration::VALID_OPTION_KEYS.each do |key|
+        send("#{key}=", options[key])
+      end
 
-	      read_file
-	    end
+      read_file
+    end
 	    
-	    private
-	    def read_file
-	    	rows = []
-	    	begin
-				CSV.foreach(file, {:col_sep=>"\t"}) do |row|
-					rows << row
-				end
-
-				Configuration::VALID_OPTION_KEYS.each do |key| 
-					send("#{key}=", rows) if key === :rows
-				end
+    private
+    def read_file
+    	rows = []
+    	begin
+      	CSV.foreach(file, {:col_sep=>"\t"}) do |row|
+      		rows << row
+      	end
 				
-			rescue
-				# error
-			end
-	    	
-	    end
+      	Configuration::VALID_OPTION_KEYS.each do |key|
+      		send("#{key}=", rows) if key === :rows
+      	end
+      rescue
+      	# error
+      end
+    end
 	    
-	    include Request
+    include Request
 	end
 end
