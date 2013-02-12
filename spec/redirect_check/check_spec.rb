@@ -32,7 +32,7 @@ describe RedirectCheck::Check do
 			@configuration = {
 				:ua => 'Mozilla/5.0 (Linux; U; Android 4.0.3; ja-jp; ISW13F Build/V51R37G) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.',
 				:file => File.expand_path( './sample/files/test.txt' ),
-				:rows => [["http://www.yahoo.co.jp/","http://m.yahoo.co.jp/","302"],["http://animita.tv","http://animita.tv/top","302"]],
+				:rows => [["http://www.yahoo.co.jp/","http://m.yahoo.co.jp/","302"],["http://animita.tv/","http://animita.tv/top","302"]],
 				:result => [{:req_url=>"http://www.yahoo.co.jp/", :code=>302, :location=>"http://m.yahoo.co.jp/", :result=>true}]
 			}
 		end
