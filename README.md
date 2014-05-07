@@ -14,5 +14,4 @@ test
 例）
 	
 	http://www.yahoo.co.jp	http://m.yahoo.co.jp	302
-	
 	http://animita.tv	http://animita.tv/top	302
